@@ -1,0 +1,116 @@
+.grid {
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-template-rows: 60px 60px;
+  grid-auto-flow: column;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  text-align: center;
+  gap: 1px;
+  margin-bottom: 8px;
+}
+
+.grid > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 60px 60px 60px;
+  grid-template-rows: 60px 60px 60px;
+  grid-auto-flow: row;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  text-align: center;
+  gap: 1px;
+}
+
+.grid-2 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  padding: 10px;
+  text-align: center;
+}
+
+.item-1 {
+  border: 1px solid black;
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: aqua;
+}
+
+.item-2 {
+  border: 1px solid black;
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  background-color: rgb(28, 218, 11);
+}
+
+.item-3 {
+  border: 1px solid black;
+  display: grid;
+  grid-column-start: 4;
+  grid-column-end: 11;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  background-color: rgb(198, 17, 235);
+}
+
+.item-4 {
+  border: 1px solid black;
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-color: rgb(97, 16, 247);
+}
+
+.item-5 {
+  border: 1px solid black;
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: red;
+}
+
+.item-6 {
+  border: 1px solid black;
+  display: grid;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 5;
+  grid-row-end: 5;
+  background-color: yellow;
+}
+
+.item-7 {
+  border: 1px solid black;
+  display: grid;
+  grid-column-start: 6;
+  grid-column-end: 7;
+  background-color: rgb(20, 177, 124);
+}
+
+.item-8 {
+  border: 1px solid black;
+  display: grid;
+  grid-column-start: 7;
+  grid-column-end: 11;
+  background-color: rgb(243, 31, 208);
+}
