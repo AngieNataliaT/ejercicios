@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 60px 60px;
@@ -7,7 +13,7 @@
   font-size: 20px;
   text-align: center;
   gap: 1px;
-  margin-bottom: 8px;
+  margin: 10px;
 }
 
 .grid > div {
@@ -20,12 +26,13 @@
 .grid-2 {
   display: grid;
   grid-template-columns: 60px 60px 60px;
-  grid-template-rows: 60px 60px 60px;
+  grid-template-rows: 60px 60px;
   grid-auto-flow: row;
   font-family: "Courier New", Courier, monospace;
   font-size: 20px;
   text-align: center;
   gap: 1px;
+  margin: 10px;
 }
 
 .grid-2 > div {
@@ -41,6 +48,7 @@
   grid-template-rows: repeat(5, 1fr);
   padding: 10px;
   text-align: center;
+  margin: 10px;
 }
 
 .item-1 {
@@ -76,6 +84,7 @@
 .item-4 {
   border: 1px solid black;
   display: grid;
+
   grid-column-start: 1;
   grid-column-end: 2;
   background-color: rgb(97, 16, 247);
@@ -113,4 +122,60 @@
   grid-column-start: 7;
   grid-column-end: 11;
   background-color: rgb(243, 31, 208);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  border: 1px solid black;
+  margin: 10px;
+  grid-template-areas:
+    "Header Header Header Header"
+    "Main Main Sidebar Sidebar"
+    "Footer Footer Footer Footer";
+}
+
+.a {
+  grid-area: Header;
+  border: 1px solid black;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: chocolate;
+}
+
+.b {
+  grid-area: Main;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  background-color: burlywood;
+}
+
+.c {
+  grid-area: Sidebar;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  background-color: chartreuse;
+}
+
+.d {
+  grid-area: Footer;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  background-color: cadetblue;
 }
